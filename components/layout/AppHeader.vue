@@ -68,6 +68,8 @@ const logout = () => {
 </script>
 
 <style lang="scss" scoped>
+@use "sass:color";
+
 .app-header {
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -124,7 +126,7 @@ const logout = () => {
         transition: background-color 0.2s ease;
         
         &:hover {
-          background-color: darken(#2ecc71, 10%);
+          background-color: color.adjust(#2ecc71, $lightness: -10%);
           color: white;
         }
         

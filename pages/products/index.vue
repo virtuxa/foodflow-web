@@ -51,6 +51,8 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
+@use "sass:color";
+
 .products-page {
   h1 {
     margin-bottom: 1rem;
@@ -71,7 +73,7 @@ useHead({
       align-items: center;
       
       &:hover {
-        background-color: darken(#2ecc71, 10%);
+        background-color: color.adjust(#2ecc71, $lightness: -10%);
       }
       
       .icon {
